@@ -1,0 +1,26 @@
+PODS:
+  - Alamofire (5.2.1)
+  - NeatLayout (1.1.0)
+  - SDWebImage (5.8.3):
+    - SDWebImage/Core (= 5.8.3)
+  - SDWebImage/Core (5.8.3)
+
+DEPENDENCIES:
+  - Alamofire (~> 5.2)
+  - NeatLayout
+  - SDWebImage (~> 5.0)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - NeatLayout
+    - SDWebImage
+
+SPEC CHECKSUMS:
+  Alamofire: e911732990610fe89af59ac0077f923d72dc3dfd
+  NeatLayout: aed0cc430b95a6f927e0c6292678b0d39245a7c5
+  SDWebImage: 112503ec94a5a2a41869503844a15e8d8f1ead5c
+
+PODFILE CHECKSUM: 8def08972b95575858da66045b50d165f88ef5b4
+
+COCOAPODS: 1.9.3

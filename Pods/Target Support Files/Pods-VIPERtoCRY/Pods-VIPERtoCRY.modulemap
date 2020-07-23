@@ -1,0 +1,6 @@
+framework module Pods_VIPERtoCRY {
+  umbrella header "Pods-VIPERtoCRY-umbrella.h"
+
+  export *
+  module * { export * }
+}
