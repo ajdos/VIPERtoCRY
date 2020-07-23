@@ -16,7 +16,7 @@ class DetailAssembly: Assembly {
         guard let unwrapModel = userModel else { return UsersListAssembly.assembleModule() }
         let view = DetailViewController()
         let dataProvider = DetailDataProvider()
-        let presenter = DetailPresenter(detailUser: [unwrapModel.user], dataProvider: dataProvider)
+        let presenter = DetailPresenter(detailUser: unwrapModel.user, dataProvider: dataProvider)
         let interactor = DetailInteractor()
         let router = DetailRouter()
         

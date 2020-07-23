@@ -10,6 +10,7 @@ import UIKit
 
 protocol DetailViewInput: class {
     func update(with viewModel: DetailViewModel)
+    func presentShareScreen(userImage: String)
 }
 
 class DetailViewController: UIViewController {
@@ -17,7 +18,7 @@ class DetailViewController: UIViewController {
     var presenter: DetailViewOutput?
     private var tableView = UITableView()
     private var detailViewModel: DetailViewModel?
-   
+    
     
     
     override func viewDidLoad() {
@@ -42,8 +43,13 @@ class DetailViewController: UIViewController {
     
     private func setupNavigationBar() {
         setDarkNavigationBar()
-        setCustomBackIcon(tintColor: .darkGray)
+        setShareBarButtonItem(tintColor: .white, target: self, action: #selector(tap))
+        setCustomBackIcon(tintColor: .white)
         self.title = "Detail info"
+    }
+    
+    @objc private func tap() {
+        presenter?.shareButtonTapped()
     }
     
     
@@ -68,10 +74,26 @@ extension DetailViewController: UITableViewDataSource, UITableViewDelegate {
 }
 
 extension DetailViewController: DetailViewInput {
+    func presentShareScreen(userImage: String) {
+        let objectsToShare = [userImage] as [Any]
+        let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+        activityVC.excludedActivityTypes = [
+            UIActivity.ActivityType.postToWeibo,
+            UIActivity.ActivityType.print,
+            UIActivity.ActivityType.assignToContact,
+            UIActivity.ActivityType.saveToCameraRoll,
+            UIActivity.ActivityType.addToReadingList,
+            UIActivity.ActivityType.postToFlickr,
+            UIActivity.ActivityType.postToVimeo,
+            UIActivity.ActivityType.postToTencentWeibo
+        ]
+        self.present(activityVC, animated: true, completion: nil)
+    }
+    
+    
     func update(with viewModel: DetailViewModel) {
         self.detailViewModel = viewModel
         tableView.reloadData()
     }
-    
-    
 }
+

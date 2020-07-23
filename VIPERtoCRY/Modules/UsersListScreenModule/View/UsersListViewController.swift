@@ -52,6 +52,7 @@ class UsersListViewController: UIViewController {
     private func setupNavigationBar() {
         setDarkNavigationBar()
         setTitleColor(color: .white)
+        setCustomBackIcon(tintColor: .white)
         self.title = "Forbes"
         
     }

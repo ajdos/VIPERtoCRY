@@ -14,6 +14,9 @@ extension UIViewController {
         navigationController?.navigationBar.barTintColor = .black
         navigationController?.navigationBar.barStyle = .black
         navigationController?.navigationBar.isTranslucent = false
+        navigationController?.navigationItem.backBarButtonItem?.tintColor = .white
+        navigationController?.navigationItem.rightBarButtonItem?.tintColor = .white
+        
     }
     
     
@@ -22,11 +25,22 @@ extension UIViewController {
         nav?.titleTextAttributes = [NSAttributedString.Key.foregroundColor: color]
     }
     
-    func setCustomBackIcon(tintColor: UIColor = .white ) {
+    func setCustomBackIcon(tintColor: UIColor) {
         let backItem = UIBarButtonItem()
         backItem.tintColor = tintColor
         backItem.title = ""
         navigationItem.backBarButtonItem = backItem
+        backItem.style = .done
     }
+    
+    func setShareBarButtonItem(tintColor: UIColor, target: UIViewController, action: Selector?) {
+        let shareItem = UIBarButtonItem(barButtonSystemItem: .action, target: target, action: action)
+        shareItem.tintColor = tintColor
+        navigationItem.rightBarButtonItem = shareItem
+        shareItem.style = .plain
+    }
+    
+    
+ 
     
 }

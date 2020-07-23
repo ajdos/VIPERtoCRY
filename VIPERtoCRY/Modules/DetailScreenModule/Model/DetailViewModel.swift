@@ -14,12 +14,12 @@ struct DetailViewModel {
     
     enum Row {
         
-        case photo(configurator: CellConfiguratorProtocol)
-        case name(configurator: CellConfiguratorProtocol)
-        case position(configurator: CellConfiguratorProtocol)
-        case company(configurator: CellConfiguratorProtocol)
-        case activity(configurator: CellConfiguratorProtocol)
-        var configurator: CellConfiguratorProtocol {
+        case photo(configurator: TableCellConfiguratorProtocol)
+        case name(configurator: TableCellConfiguratorProtocol)
+        case position(configurator: TableCellConfiguratorProtocol)
+        case company(configurator: TableCellConfiguratorProtocol)
+        case activity(configurator: TableCellConfiguratorProtocol)
+        var configurator: TableCellConfiguratorProtocol {
             
             switch self {
             case let .photo(configurator): return configurator

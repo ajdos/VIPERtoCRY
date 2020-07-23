@@ -31,6 +31,14 @@
 		1E9BF18124BF37D5008B5E70 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9BF18024BF37D5008B5E70 /* UserModel.swift */; };
 		1E9BF18324BF3AC1008B5E70 /* UsersDataListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9BF18224BF3AC1008B5E70 /* UsersDataListModel.swift */; };
 		1E9BF18524BF3CDF008B5E70 /* UsersListCustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9BF18424BF3CDF008B5E70 /* UsersListCustomTableViewCell.swift */; };
+		1EEBE8C724C96DDD00665F06 /* Assembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEBE8C024C96DDD00665F06 /* Assembly.swift */; };
+		1EEBE8C824C96DDD00665F06 /* Foundation+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEBE8C124C96DDD00665F06 /* Foundation+Extension.swift */; };
+		1EEBE8C924C96DDD00665F06 /* ConfigurableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEBE8C224C96DDD00665F06 /* ConfigurableCell.swift */; };
+		1EEBE8CA24C96DDD00665F06 /* ModuleTransitionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEBE8C324C96DDD00665F06 /* ModuleTransitionHandler.swift */; };
+		1EEBE8CB24C96DDD00665F06 /* TableCellConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEBE8C424C96DDD00665F06 /* TableCellConfigurator.swift */; };
+		1EEBE8CC24C96DDD00665F06 /* Collection+Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEBE8C524C96DDD00665F06 /* Collection+Register.swift */; };
+		1EEBE8CD24C96DDD00665F06 /* NavigationBarSetings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEBE8C624C96DDD00665F06 /* NavigationBarSetings.swift */; };
+		1EEBE8CF24C9783500665F06 /* SetupDetailLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEBE8CE24C9783500665F06 /* SetupDetailLabel.swift */; };
 		88DDE5D731A82C33D2EB66BA /* Pods_VIPERtoCRY.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B007E5972773F4A8204F7F48 /* Pods_VIPERtoCRY.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,13 +61,6 @@
 		1E39549A24C039FE00B1CA57 /* UsersListScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListScreenRouter.swift; sourceTree = "<group>"; };
 		1E39549C24C03A5A00B1CA57 /* UsersListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListInteractor.swift; sourceTree = "<group>"; };
 		1E39549E24C049B200B1CA57 /* UsersListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListViewController.swift; sourceTree = "<group>"; };
-		1E3EFADE24C963A600CB1828 /* NavigationBarSetings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarSetings.swift; sourceTree = "<group>"; };
-		1E3EFADF24C963A600CB1828 /* Assembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assembly.swift; sourceTree = "<group>"; };
-		1E3EFAE024C963A600CB1828 /* TableCellConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCellConfigurator.swift; sourceTree = "<group>"; };
-		1E3EFAE124C963A600CB1828 /* CellConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellConfigurable.swift; sourceTree = "<group>"; };
-		1E3EFAE224C963A600CB1828 /* ModuleTransitionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleTransitionHandler.swift; sourceTree = "<group>"; };
-		1E3EFAE324C963A600CB1828 /* Foundation+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Foundation+Extension.swift"; sourceTree = "<group>"; };
-		1E3EFAE424C963A600CB1828 /* Collection+Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Register.swift"; sourceTree = "<group>"; };
 		1E9BF14724BF2C90008B5E70 /* VIPERtoCRY.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VIPERtoCRY.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E9BF14A24BF2C90008B5E70 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1E9BF15324BF2C91008B5E70 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -68,6 +69,14 @@
 		1E9BF18024BF37D5008B5E70 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		1E9BF18224BF3AC1008B5E70 /* UsersDataListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersDataListModel.swift; sourceTree = "<group>"; };
 		1E9BF18424BF3CDF008B5E70 /* UsersListCustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListCustomTableViewCell.swift; sourceTree = "<group>"; };
+		1EEBE8C024C96DDD00665F06 /* Assembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assembly.swift; sourceTree = "<group>"; };
+		1EEBE8C124C96DDD00665F06 /* Foundation+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Foundation+Extension.swift"; sourceTree = "<group>"; };
+		1EEBE8C224C96DDD00665F06 /* ConfigurableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurableCell.swift; sourceTree = "<group>"; };
+		1EEBE8C324C96DDD00665F06 /* ModuleTransitionHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModuleTransitionHandler.swift; sourceTree = "<group>"; };
+		1EEBE8C424C96DDD00665F06 /* TableCellConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableCellConfigurator.swift; sourceTree = "<group>"; };
+		1EEBE8C524C96DDD00665F06 /* Collection+Register.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Collection+Register.swift"; sourceTree = "<group>"; };
+		1EEBE8C624C96DDD00665F06 /* NavigationBarSetings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationBarSetings.swift; sourceTree = "<group>"; };
+		1EEBE8CE24C9783500665F06 /* SetupDetailLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupDetailLabel.swift; sourceTree = "<group>"; };
 		5002A46B5384E057A8F60B11 /* Pods-VIPERtoCRY.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIPERtoCRY.debug.xcconfig"; path = "Target Support Files/Pods-VIPERtoCRY/Pods-VIPERtoCRY.debug.xcconfig"; sourceTree = "<group>"; };
 		7E8A23D56401368FC7EB65F4 /* Pods-VIPERtoCRY.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIPERtoCRY.release.xcconfig"; path = "Target Support Files/Pods-VIPERtoCRY/Pods-VIPERtoCRY.release.xcconfig"; sourceTree = "<group>"; };
 		B007E5972773F4A8204F7F48 /* Pods_VIPERtoCRY.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VIPERtoCRY.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -120,23 +129,17 @@
 			path = AutorisationManager;
 			sourceTree = "<group>";
 		};
-		1E3EFADC24C963A200CB1828 /* Common */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Common;
-			sourceTree = "<group>";
-		};
 		1E3EFADD24C963A600CB1828 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				1E3EFADE24C963A600CB1828 /* NavigationBarSetings.swift */,
-				1E3EFADF24C963A600CB1828 /* Assembly.swift */,
-				1E3EFAE024C963A600CB1828 /* TableCellConfigurator.swift */,
-				1E3EFAE124C963A600CB1828 /* CellConfigurable.swift */,
-				1E3EFAE224C963A600CB1828 /* ModuleTransitionHandler.swift */,
-				1E3EFAE324C963A600CB1828 /* Foundation+Extension.swift */,
-				1E3EFAE424C963A600CB1828 /* Collection+Register.swift */,
+				1EEBE8C024C96DDD00665F06 /* Assembly.swift */,
+				1EEBE8C524C96DDD00665F06 /* Collection+Register.swift */,
+				1EEBE8C224C96DDD00665F06 /* ConfigurableCell.swift */,
+				1EEBE8C124C96DDD00665F06 /* Foundation+Extension.swift */,
+				1EEBE8C324C96DDD00665F06 /* ModuleTransitionHandler.swift */,
+				1EEBE8C624C96DDD00665F06 /* NavigationBarSetings.swift */,
+				1EEBE8C424C96DDD00665F06 /* TableCellConfigurator.swift */,
+				1EEBE8CE24C9783500665F06 /* SetupDetailLabel.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -206,7 +209,6 @@
 		1E9BF16224BF2DBE008B5E70 /* SignInScreenModule */ = {
 			isa = PBXGroup;
 			children = (
-				1E3EFADC24C963A200CB1828 /* Common */,
 				1E9BF17324BF2F36008B5E70 /* View */,
 				1E9BF17224BF2F32008B5E70 /* Interactor */,
 				1E9BF17124BF2F2F008B5E70 /* Presenter */,
@@ -552,11 +554,14 @@
 				1E39549924C033A300B1CA57 /* UsersListNetwokManager.swift in Sources */,
 				1E095D7C24C5D1E400081545 /* DetailRouter.swift in Sources */,
 				1E9BF14B24BF2C90008B5E70 /* AppDelegate.swift in Sources */,
+				1EEBE8CC24C96DDD00665F06 /* Collection+Register.swift in Sources */,
 				1E39549324BF4D3600B1CA57 /* UserListScreenAssembly.swift in Sources */,
+				1EEBE8CA24C96DDD00665F06 /* ModuleTransitionHandler.swift in Sources */,
 				1E353D6424C816890082A4F8 /* PositionTableViewCell.swift in Sources */,
 				1E353D6624C816B00082A4F8 /* CompanyTableViewCell.swift in Sources */,
 				1E095D7424C5D17C00081545 /* DetailViewController.swift in Sources */,
 				1E9BF18524BF3CDF008B5E70 /* UsersListCustomTableViewCell.swift in Sources */,
+				1EEBE8CF24C9783500665F06 /* SetupDetailLabel.swift in Sources */,
 				1E353D7124C838270082A4F8 /* DetailDataProvider.swift in Sources */,
 				1E095D7824C5D1A100081545 /* DetailPresenter.swift in Sources */,
 				1E353D6E24C82CF00082A4F8 /* DetailViewModel.swift in Sources */,
@@ -566,9 +571,14 @@
 				1E39549B24C039FE00B1CA57 /* UsersListScreenRouter.swift in Sources */,
 				1E095D7624C5D19000081545 /* DetailInteractor.swift in Sources */,
 				1E39549724C0309E00B1CA57 /* UsersListPresenter.swift in Sources */,
+				1EEBE8C724C96DDD00665F06 /* Assembly.swift in Sources */,
 				1E39549D24C03A5A00B1CA57 /* UsersListInteractor.swift in Sources */,
+				1EEBE8C924C96DDD00665F06 /* ConfigurableCell.swift in Sources */,
+				1EEBE8C824C96DDD00665F06 /* Foundation+Extension.swift in Sources */,
 				1E9BF18324BF3AC1008B5E70 /* UsersDataListModel.swift in Sources */,
 				1E9BF18124BF37D5008B5E70 /* UserModel.swift in Sources */,
+				1EEBE8CB24C96DDD00665F06 /* TableCellConfigurator.swift in Sources */,
+				1EEBE8CD24C96DDD00665F06 /* NavigationBarSetings.swift in Sources */,
 				1E353D6824C816C20082A4F8 /* ActivityTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -14,22 +14,12 @@ class ActivityCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        setupViews()
+        addSubview(userActivityLabel)
+        setupViews(with: userActivityLabel)
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-    private func setupViews() {
-        userActivityLabel.font = .boldSystemFont(ofSize: 20)
-        userActivityLabel.textColor = .black
-        userActivityLabel.textAlignment = .left
-        userActivityLabel.numberOfLines = 0
-        addSubview(userActivityLabel)
-        userActivityLabel.autoPinEdge(toSuperviewEdge: .left, withInset: 8)
-        userActivityLabel.autoPinEdge(toSuperviewEdge: .bottom, withInset: 10)
-        userActivityLabel.autoPinEdge(toSuperviewEdge: .right, withInset: 8)
-        userActivityLabel.autoPinEdge(toSuperviewEdge: .top, withInset: 10)
     }
 }
 
