@@ -9,7 +9,7 @@
 import Foundation
 
 protocol SignUpViewOutput {
-    
+    func backButtonTapped()
 }
 
 protocol SignUpInteractorOutput: class {
@@ -27,7 +27,10 @@ class SignUpPresenter {
 }
 
 extension SignUpPresenter: SignUpViewOutput {
-  
+    func backButtonTapped() {
+        router?.openSignInView()
+    }
+
 }
 
 extension SignUpPresenter: SignUpInteractorOutput {

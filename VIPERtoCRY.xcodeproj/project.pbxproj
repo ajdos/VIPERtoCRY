@@ -190,6 +190,7 @@
 			children = (
 				1E9BF16024BF2CFC008B5E70 /* Application */,
 				1E9BF15E24BF2C9D008B5E70 /* Modules */,
+				1EF6954824CAF80E0065CA13 /* ProfileModule */,
 				1E3EFADD24C963A600CB1828 /* Common */,
 				1E9BF17A24BF300B008B5E70 /* Services */,
 				1E9BF17B24BF3087008B5E70 /* Resources */,
@@ -450,6 +451,13 @@
 				1E9BF15824BF2C91008B5E70 /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		1EF6954824CAF80E0065CA13 /* ProfileModule */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ProfileModule;
 			sourceTree = "<group>";
 		};
 		AC617638E6C26A780460F0B6 /* Frameworks */ = {

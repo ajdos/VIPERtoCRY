@@ -13,7 +13,7 @@ class SignUpAssembly: Assembly {
         let view =  SignUpViewController()
         let presenter = SignUpPresenter()
         let interactor = SignUpInteractor()
-        let router = SignUpRouter()
+        let router = SignUpRouter(transition: view)
         
         view.presenter = presenter
         presenter.view = view

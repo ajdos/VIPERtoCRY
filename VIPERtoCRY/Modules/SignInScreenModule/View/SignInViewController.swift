@@ -31,7 +31,11 @@ class SignInViewController: UIViewController {
         setupSubviews()
         
     }
-    @objc private func tap(sender: UIButton!) {
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.navigationBar.isHidden = true
+        
+    }
+    @objc private func signUptap(sender: UIButton!) {
         presenter?.signUpTapped()
     }
     
@@ -62,7 +66,7 @@ extension SignInViewController {
         titleLabel.autoPinEdge(toSuperviewEdge: .right, withInset: 8)
         titleLabel.autoPinEdge(toSuperviewEdge: .left, withInset: 8)
         titleLabel.autoAlignAxis(toSuperviewAxis: .vertical)
-        titleLabel.autoPinEdge(toSuperviewEdge: .top, withInset: 80)
+        titleLabel.autoPinEdge(toSuperviewEdge: .top, withInset: 40)
         
         enterInfoLabel.text = "Sign in to continue, please"
         enterInfoLabel.textColor = .white
@@ -95,6 +99,7 @@ extension SignInViewController {
         loginTextField.returnKeyType = .default
         view.addSubview(loginTextField)
         loginTextField.layer.masksToBounds = true
+        loginTextField.autoSetDimension(.height, toSize: 50)
         loginTextField.autoAlignAxis(toSuperviewAxis: .vertical)
         loginTextField.autoPinEdge(.top, to: .bottom, of: incorrectInfoLabel, withOffset: 50)
         loginTextField.autoPinEdge(toSuperviewEdge: .right, withInset: 30)
@@ -107,9 +112,10 @@ extension SignInViewController {
         passwordTextField.clearButtonMode = .always
         passwordTextField.keyboardAppearance = .dark
         passwordTextField.returnKeyType = .default
-        passwordTextField.isSecureTextEntry = false //TODO: add eye selector
+        passwordTextField.isSecureTextEntry = true //TODO: add eye selector
         view.addSubview(passwordTextField)
         passwordTextField.layer.masksToBounds = true
+        passwordTextField.autoSetDimension(.height, toSize: 50)
         passwordTextField.autoAlignAxis(toSuperviewAxis: .vertical)
         passwordTextField.autoPinEdge(.top, to: .bottom, of: loginTextField, withOffset: 10)
         passwordTextField.autoPinEdge(toSuperviewEdge: .right, withInset: 30)
@@ -124,12 +130,12 @@ extension SignInViewController {
         signInButton.layer.cornerRadius = 15
         signInButton.autoSetDimensions(to: CGSize(width: 20, height: 45))
         signInButton.autoAlignAxis(toSuperviewAxis: .vertical)
-        signInButton.autoPinEdge(.top, to: .bottom, of: passwordTextField, withOffset: 60)
+        signInButton.autoPinEdge(.top, to: .bottom, of: passwordTextField, withOffset: 30)
         signInButton.autoPinEdge(toSuperviewEdge: .right, withInset: 65)
         signInButton.autoPinEdge(toSuperviewEdge: .left, withInset: 65)
         
         signUpButton.backgroundColor = .black
-        signUpButton.addTarget(self, action: #selector(tap), for: .touchUpInside)
+        signUpButton.addTarget(self, action: #selector(signUptap), for: .touchUpInside)
         signUpButton.setTitle("Sign up for free", for: .normal)
         signUpButton.tintColor = .white
         signUpButton.titleColor(for: .focused)
