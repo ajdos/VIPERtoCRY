@@ -35,6 +35,7 @@ class UsersListViewController: UIViewController {
     }
     
     private func setupSubviews() {
+        view.backgroundColor = .orange
         tableView.separatorStyle = .none
         tableView.delegate = self
         tableView.dataSource = self

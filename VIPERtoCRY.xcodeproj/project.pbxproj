@@ -44,6 +44,7 @@
 		1EEBE8D724C9B36800665F06 /* SignInPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEBE8D624C9B36800665F06 /* SignInPresenter.swift */; };
 		1EEBE8D924C9B37C00665F06 /* SignInAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEBE8D824C9B37C00665F06 /* SignInAssembly.swift */; };
 		1EEBE8DB24C9B39600665F06 /* SignInRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEBE8DA24C9B39600665F06 /* SignInRouter.swift */; };
+		1EF6953D24C9DF200065CA13 /* UITextField+roundsCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF6953C24C9DF200065CA13 /* UITextField+roundsCorner.swift */; };
 		88DDE5D731A82C33D2EB66BA /* Pods_VIPERtoCRY.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B007E5972773F4A8204F7F48 /* Pods_VIPERtoCRY.framework */; };
 /* End PBXBuildFile section */
 
@@ -87,6 +88,7 @@
 		1EEBE8D624C9B36800665F06 /* SignInPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInPresenter.swift; sourceTree = "<group>"; };
 		1EEBE8D824C9B37C00665F06 /* SignInAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInAssembly.swift; sourceTree = "<group>"; };
 		1EEBE8DA24C9B39600665F06 /* SignInRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInRouter.swift; sourceTree = "<group>"; };
+		1EF6953C24C9DF200065CA13 /* UITextField+roundsCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+roundsCorner.swift"; sourceTree = "<group>"; };
 		5002A46B5384E057A8F60B11 /* Pods-VIPERtoCRY.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIPERtoCRY.debug.xcconfig"; path = "Target Support Files/Pods-VIPERtoCRY/Pods-VIPERtoCRY.debug.xcconfig"; sourceTree = "<group>"; };
 		7E8A23D56401368FC7EB65F4 /* Pods-VIPERtoCRY.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIPERtoCRY.release.xcconfig"; path = "Target Support Files/Pods-VIPERtoCRY/Pods-VIPERtoCRY.release.xcconfig"; sourceTree = "<group>"; };
 		B007E5972773F4A8204F7F48 /* Pods_VIPERtoCRY.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VIPERtoCRY.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -150,6 +152,7 @@
 				1EEBE8C624C96DDD00665F06 /* NavigationBarSetings.swift */,
 				1EEBE8C424C96DDD00665F06 /* TableCellConfigurator.swift */,
 				1EEBE8CE24C9783500665F06 /* SetupDetailLabel.swift */,
+				1EF6953C24C9DF200065CA13 /* UITextField+roundsCorner.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -576,6 +579,7 @@
 				1E353D6424C816890082A4F8 /* PositionTableViewCell.swift in Sources */,
 				1E353D6624C816B00082A4F8 /* CompanyTableViewCell.swift in Sources */,
 				1E095D7424C5D17C00081545 /* DetailViewController.swift in Sources */,
+				1EF6953D24C9DF200065CA13 /* UITextField+roundsCorner.swift in Sources */,
 				1E9BF18524BF3CDF008B5E70 /* UsersListCustomTableViewCell.swift in Sources */,
 				1EEBE8CF24C9783500665F06 /* SetupDetailLabel.swift in Sources */,
 				1E353D7124C838270082A4F8 /* DetailDataProvider.swift in Sources */,
