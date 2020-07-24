@@ -8,11 +8,11 @@
 
 import Foundation
 
-protocol SignInInteractorOutput: class {
-    
+protocol SignInViewOutput {
+    func signUpTapped()
 }
 
-protocol SignInViewOutput {
+protocol SignInInteractorOutput: class {
     
 }
 
@@ -33,5 +33,9 @@ extension SignInPresenter: SignInInteractorOutput {
 }
 
 extension SignInPresenter: SignInViewOutput {
+    func signUpTapped() {
+        router?.openSignUpView()
+    }
+    
     
 }

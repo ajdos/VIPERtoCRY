@@ -1,19 +1,19 @@
 //
-//  SignInAssembly.swift
+//  SignUpAssembly.swift
 //  VIPERtoCRY
 //
-//  Created by Айдин Абдурахманов on 23.07.2020.
+//  Created by Айдин Абдурахманов on 24.07.2020.
 //  Copyright © 2020 Айдин Абдурахманов. All rights reserved.
 //
 
 import UIKit
 
-class SignInAssembly: Assembly {
+class SignUpAssembly: Assembly {
     static func assembleModule() -> UIViewController {
-        let view = SignInViewController()
-        let presenter = SignInPresenter()
-        let interactor = SignInInteractor()
-        let router = SignInRouter(transition: view)
+        let view =  SignUpViewController()
+        let presenter = SignUpPresenter()
+        let interactor = SignUpInteractor()
+        let router = SignUpRouter()
         
         view.presenter = presenter
         presenter.view = view

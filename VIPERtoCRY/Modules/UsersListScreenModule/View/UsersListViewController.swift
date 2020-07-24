@@ -51,6 +51,7 @@ class UsersListViewController: UIViewController {
     }
     
     private func setupNavigationBar() {
+        navigationController?.navigationBar.isHidden = false
         setDarkNavigationBar()
         setTitleColor(color: .white)
         setCustomBackIcon(tintColor: .white)

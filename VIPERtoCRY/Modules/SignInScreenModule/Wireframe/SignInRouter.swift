@@ -9,13 +9,21 @@
 import Foundation
 
 protocol SignInRouterInput {
-    
+    func openSignUpView()
 }
 
 final class SignInRouter {
-    
+     weak var transition: ModuleTransitionHandler?
+       
+       init(transition: ModuleTransitionHandler?) {
+           self.transition = transition
+       }
 }
 
 extension SignInRouter: SignInRouterInput {
+    func openSignUpView() {
+        transition?.push(moduleType: UsersListAssembly.self)
+    }
+    
     
 }
