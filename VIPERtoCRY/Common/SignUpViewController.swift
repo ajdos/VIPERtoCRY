@@ -30,10 +30,24 @@ class SignUpViewController: UIViewController {
         super.viewDidLoad()
         navigationController?.navigationBar.isHidden = true
         setupViews()
+        continueButton.isEnabled = false
         
     }
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.navigationBar.isHidden = true
+    }
+    
+    @objc private func textFieldChanged() {
+        if nameTextField.text?.isEmpty == false && emailTextField.text?.isEmpty == false && emailTextField.text!.contains("@") && emailTextField.text!.contains(".") && (passwordTextField.text?.count)! >= 8 && (confirmPasswordTextField.text?.count)! >= 8 {
+            continueButton.isEnabled = true
+        } else {
+            continueButton.isEnabled = false
+        }
+    }
+    
+    @objc private func continueTap(sender: UIButton!) {
+        presenter?.continueButtonTapped()
+        print("Continue Button enabled")
     }
     
     @objc private func backTap(sender: UIButton!) {
@@ -92,6 +106,7 @@ extension SignUpViewController {
         
         nameTextField.placeholder = "Your Name"
         nameTextField.backgroundColor = .white
+        nameTextField.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
         nameTextField.borderStyle = .roundedRect
         nameTextField.keyboardType = .namePhonePad
         nameTextField.clearButtonMode = .always
@@ -107,6 +122,7 @@ extension SignUpViewController {
         
         emailTextField.placeholder = "Your E-mail"
         emailTextField.backgroundColor = .white
+        emailTextField.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
         emailTextField.keyboardType = .emailAddress
         emailTextField.borderStyle = .roundedRect
         emailTextField.clearButtonMode = .always
@@ -122,6 +138,7 @@ extension SignUpViewController {
         
         passwordTextField.placeholder = "Your Password"
         passwordTextField.backgroundColor = .white
+        passwordTextField.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
         passwordTextField.keyboardType = .default
         passwordTextField.borderStyle = .roundedRect
         passwordTextField.clearButtonMode = .always
@@ -138,6 +155,7 @@ extension SignUpViewController {
         
         confirmPasswordTextField.placeholder = "Confirm your Password"
         confirmPasswordTextField.backgroundColor = .white
+        confirmPasswordTextField.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
         confirmPasswordTextField.keyboardType = .default
         confirmPasswordTextField.borderStyle = .roundedRect
         confirmPasswordTextField.clearButtonMode = .always
@@ -153,6 +171,7 @@ extension SignUpViewController {
         confirmPasswordTextField.autoPinEdge(toSuperviewEdge: .left, withInset: 30)
         
         continueButton.backgroundColor = .black
+        continueButton.addTarget(self, action: #selector(continueTap), for: .touchUpInside)
         continueButton.setTitle("Continue", for: .normal)
         continueButton.tintColor = .white
         continueButton.titleColor(for: .highlighted)
@@ -178,5 +197,13 @@ extension SignUpViewController {
         backButton.autoPinEdge(.top, to: .bottom, of: continueButton, withOffset: 20)
         backButton.autoPinEdge(toSuperviewEdge: .right, withInset: 65)
         backButton.autoPinEdge(toSuperviewEdge: .left, withInset: 65)
+    }
+}
+
+extension SignUpViewController: UITextFieldDelegate {
+    //Скрываем клавиатуру по нажатию на текстовое поле
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 }

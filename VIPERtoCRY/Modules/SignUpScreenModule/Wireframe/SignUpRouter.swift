@@ -22,7 +22,7 @@ final class SignUpRouter {
 
 extension SignUpRouter: SignUpRouterInput {
     func openSignInView() {
-        transition?.push(moduleType: SignInAssembly.self)
+        transition?.pop()
     }
     
     

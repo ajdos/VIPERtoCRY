@@ -10,6 +10,7 @@ import Foundation
 
 protocol SignUpViewOutput {
     func backButtonTapped()
+    func continueButtonTapped()
 }
 
 protocol SignUpInteractorOutput: class {
@@ -27,6 +28,10 @@ class SignUpPresenter {
 }
 
 extension SignUpPresenter: SignUpViewOutput {
+    func continueButtonTapped() {
+    
+    }
+    
     func backButtonTapped() {
         router?.openSignInView()
     }
