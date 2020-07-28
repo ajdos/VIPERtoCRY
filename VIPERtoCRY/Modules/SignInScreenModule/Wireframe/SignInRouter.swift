@@ -10,6 +10,7 @@ import Foundation
 
 protocol SignInRouterInput {
     func openSignUpView()
+    func openProfile()
 }
 
 final class SignInRouter {
@@ -24,6 +25,9 @@ extension SignInRouter: SignInRouterInput {
     func openSignUpView() {
         transition?.push(moduleType: SignUpAssembly.self)
     }
-    
+    func openProfile() {
+        transition?.push(moduleType: UsersListAssembly.self)
+    }
+
     
 }

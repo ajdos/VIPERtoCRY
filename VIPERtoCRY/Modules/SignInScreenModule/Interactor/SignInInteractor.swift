@@ -7,9 +7,10 @@
 //
 
 import Foundation
+import Firebase
 
 protocol SignInInteractorInput {
-    
+    func findAUser(email: String, password: String)
 }
 
 class SignInInteractor {
@@ -20,5 +21,21 @@ class SignInInteractor {
 }
 
 extension SignInInteractor: SignInInteractorInput {
+    func findAUser(email: String, password: String) {
+         Auth.auth().signIn(withEmail: email, password: password, completion: { (user, error) in
+                   if error != nil {
+                    self.presenter?.errorOccured()
+                    print(error!)
+                       return
+                   }
+                   if user != nil {
+                    self.presenter?.userSignIn()
+                       
+                   }
+            self.presenter?.noSuchUser()
+               })
+               
+    }
+    
     
 }

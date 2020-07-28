@@ -10,7 +10,7 @@ import UIKit
 import NeatLayout
 
 protocol SingInViewInput: class {
-    
+    func displayWarningLabel(with text: String)
 }
 
 class SignInViewController: UIViewController {
@@ -35,6 +35,10 @@ class SignInViewController: UIViewController {
         navigationController?.navigationBar.isHidden = true
         
     }
+ 
+    @objc private func enterTap(sender: UIButton!) {
+        presenter?.loginTapped(with: loginTextField.text, password: passwordTextField.text)
+        }
     @objc private func signUptap(sender: UIButton!) {
         presenter?.signUpTapped()
     }
@@ -68,7 +72,16 @@ class SignInViewController: UIViewController {
 }
 
 extension SignInViewController: SingInViewInput {
-    
+    func displayWarningLabel(with text: String) {
+         incorrectInfoLabel.text = text
+         UIView.animate(withDuration: 5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseInOut, animations: { [weak self] in
+             self?.enterInfoLabel.alpha = 0
+             self?.incorrectInfoLabel.alpha = 1
+         }) { [weak self] complete in
+             self?.incorrectInfoLabel.alpha = 0
+             self?.enterInfoLabel.alpha = 1
+         }
+     }
 }
 
 
@@ -77,7 +90,7 @@ extension SignInViewController {
     private func setupSubviews() {
         view.clipsToBounds = true
         navigationController?.navigationBar.isHidden = true
-        incorrectInfoLabel.isHidden = true
+        incorrectInfoLabel.alpha = 0
         view.backgroundColor = .orange
         
         titleLabel.text = "Welcome to VIPER!"
@@ -145,6 +158,7 @@ extension SignInViewController {
         passwordTextField.autoPinEdge(toSuperviewEdge: .left, withInset: 30)
         
         signInButton.backgroundColor = .black
+        signInButton.addTarget(self, action: #selector(enterTap), for: .touchUpInside)
         signInButton.setTitle("Enter to your account", for: .normal)
         signInButton.tintColor = .white
         signInButton.titleColor(for: .highlighted)
@@ -172,3 +186,4 @@ extension SignInViewController {
         signUpButton.autoPinEdge(toSuperviewEdge: .left, withInset: 65)
     }
 }
+

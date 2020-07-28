@@ -10,6 +10,7 @@ import Foundation
 
 protocol SignUpRouterInput {
     func openSignInView()
+    func openProfile()
 }
 
 final class SignUpRouter {
@@ -24,6 +25,9 @@ extension SignUpRouter: SignUpRouterInput {
     func openSignInView() {
         transition?.pop()
     }
-    
+    func openProfile() {
+        // transition
+    }
+
     
 }

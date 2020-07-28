@@ -7,13 +7,17 @@
 //
 
 import Foundation
+import Firebase
 
 protocol SignInViewOutput {
     func signUpTapped()
+    func loginTapped(with email: String?, password: String?)
 }
 
 protocol SignInInteractorOutput: class {
-    
+    func errorOccured()
+    func noSuchUser()
+    func userSignIn()
 }
 
 class SignInPresenter {
@@ -29,6 +33,17 @@ class SignInPresenter {
 }
 
 extension SignInPresenter: SignInInteractorOutput {
+    func errorOccured() {
+        view?.displayWarningLabel(with: "Error occured")
+    }
+    
+    func noSuchUser() {
+        view?.displayWarningLabel(with: "No such user")
+    }
+    func userSignIn() {
+        router?.openProfile()
+    }
+
     
 }
 
@@ -37,5 +52,12 @@ extension SignInPresenter: SignInViewOutput {
         router?.openSignUpView()
     }
     
-    
+    func loginTapped(with email: String?, password: String?) {
+        guard let email = email, let password = password, email != "", password != "" else {
+            view?.displayWarningLabel(with: "Incorrect E-mail or Password! Try again.")
+            return
+        }
+        interactor?.findAUser(email: email, password: password)
+       
+    }
 }

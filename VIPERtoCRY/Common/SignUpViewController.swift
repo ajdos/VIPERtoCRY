@@ -9,7 +9,7 @@
 import UIKit
 
 protocol SignUpViewInput: class {
-    
+    func displayWarningLabel(with text: String)
 }
 //TODO: Сделать возврат на предыдущий экран всплывающим со стороны с которой пришел
 class SignUpViewController: UIViewController {
@@ -72,7 +72,7 @@ class SignUpViewController: UIViewController {
     }
     
     @objc private func continueTap(sender: UIButton!) {
-        presenter?.continueButtonTapped()
+        presenter?.continueButtonTapped(name: nameTextField.text, email: emailTextField.text, password: passwordTextField.text, confirmPassword: confirmPasswordTextField.text)
         print("Continue Button enabled")
     }
     
@@ -85,7 +85,16 @@ class SignUpViewController: UIViewController {
 }
 
 extension SignUpViewController: SignUpViewInput {
-    
+    func displayWarningLabel(with text: String) {
+          incorrectDataLabel.text = text
+          UIView.animate(withDuration: 5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseInOut, animations: { [weak self] in
+              self?.instructionLabel.alpha = 0
+              self?.incorrectDataLabel.alpha = 1
+          }) { [weak self] complete in
+              self?.incorrectDataLabel.alpha = 0
+              self?.instructionLabel.alpha = 1
+          }
+      }
 }
 
 
@@ -94,7 +103,7 @@ extension SignUpViewController: SignUpViewInput {
 extension SignUpViewController {
     private func setupViews() {
         view.clipsToBounds = true
-        incorrectDataLabel.isHidden = true
+        incorrectDataLabel.alpha = 0
         view.backgroundColor = .orange
         
         registrationLabel.text = "Come, come my friend!"

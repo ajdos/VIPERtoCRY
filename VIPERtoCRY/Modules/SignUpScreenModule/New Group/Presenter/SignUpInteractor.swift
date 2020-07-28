@@ -7,9 +7,10 @@
 //
 
 import Foundation
+import Firebase
 
 protocol SignUpInteractorInput {
-    
+    func saveNewUser(name: String, email: String, password: String)
 }
 
 class SignUpInteractor {
@@ -17,5 +18,14 @@ class SignUpInteractor {
 }
 
 extension SignUpInteractor: SignUpInteractorInput {
-    
+    func saveNewUser(name: String, email: String, password: String) {
+        Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
+            if error == nil {
+                if user != nil {
+                    self.presenter?.UserIsCreate()
+                }
+            }
+        }
+    }
+
 }
