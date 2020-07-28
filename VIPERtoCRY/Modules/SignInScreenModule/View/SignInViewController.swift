@@ -16,7 +16,6 @@ protocol SingInViewInput: class {
 class SignInViewController: UIViewController {
     
     var presenter: SignInViewOutput?
-    var textFieldView = UIView()
     var titleLabel = UILabel()
     var enterInfoLabel = UILabel()
     var incorrectInfoLabel = UILabel()
@@ -25,10 +24,11 @@ class SignInViewController: UIViewController {
     var signInButton = UIButton()
     var signUpButton = UIButton()
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupSubviews()
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardDidShow), name: UIResponder.keyboardDidShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardDidHide), name: UIResponder.keyboardDidHideNotification, object: nil)
         
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -37,6 +37,29 @@ class SignInViewController: UIViewController {
     }
     @objc private func signUptap(sender: UIButton!) {
         presenter?.signUpTapped()
+    }
+    @objc private func keyboardDidShow(notification: Notification) {
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.view.frame.origin.y == 0 {
+                UIView.animate(withDuration: 0.2, animations: {
+                    self.view.frame.origin.y -= keyboardSize.height / 2
+                }) { (result) in
+                    if result { self.titleLabel.isHidden = true }
+                    
+                }
+                
+            }
+        }
+        
+    }
+    @objc private func keyboardDidHide() {
+        if self.view.frame.size.height != 0 {
+            UIView.animate(withDuration: 0.1, animations: {
+                self.view.frame.origin.y = 0
+            }) { (result) in
+                if result { self.titleLabel.isHidden = false }
+            }
+        }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

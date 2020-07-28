@@ -31,11 +31,37 @@ class SignUpViewController: UIViewController {
         navigationController?.navigationBar.isHidden = true
         setupViews()
         continueButton.isEnabled = false
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardDidShow), name: UIResponder.keyboardDidShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardDidHide), name: UIResponder.keyboardDidHideNotification, object: nil)
         
     }
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.navigationBar.isHidden = true
     }
+    
+    @objc private func keyboardDidShow(notification: Notification) {
+          if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+              if self.view.frame.origin.y == 0 {
+                UIView.animate(withDuration: 0.1, animations: {
+                    self.view.frame.origin.y -= keyboardSize.height / 1.5
+                }) { (result) in
+                    if result { self.registrationLabel.isHidden = true }
+                }
+                
+              }
+          }
+          
+      }
+      @objc private func keyboardDidHide() {
+          if self.view.frame.origin.y != 0 {
+            UIView.animate(withDuration: 0.1, animations: {
+                self.view.frame.origin.y = 0
+            }) { (result) in
+                if result { self.registrationLabel.isHidden = false }
+            }
+              
+          }
+      }
     
     @objc private func textFieldChanged() {
         if nameTextField.text?.isEmpty == false && emailTextField.text?.isEmpty == false && emailTextField.text!.contains("@") && emailTextField.text!.contains(".") && (passwordTextField.text?.count)! >= 8 && (confirmPasswordTextField.text?.count)! >= 8 {
