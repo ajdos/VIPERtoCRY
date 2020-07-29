@@ -25,6 +25,11 @@
 		1E39549B24C039FE00B1CA57 /* UsersListScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E39549A24C039FE00B1CA57 /* UsersListScreenRouter.swift */; };
 		1E39549D24C03A5A00B1CA57 /* UsersListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E39549C24C03A5A00B1CA57 /* UsersListInteractor.swift */; };
 		1E39549F24C049B200B1CA57 /* UsersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E39549E24C049B200B1CA57 /* UsersListViewController.swift */; };
+		1E82E55B24D19E020074B922 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E82E55A24D19E020074B922 /* LaunchViewController.swift */; };
+		1E82E55D24D19E130074B922 /* LaunchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E82E55C24D19E130074B922 /* LaunchPresenter.swift */; };
+		1E82E55F24D19E250074B922 /* LaunchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E82E55E24D19E250074B922 /* LaunchInteractor.swift */; };
+		1E82E56124D19E350074B922 /* LaunchAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E82E56024D19E350074B922 /* LaunchAssembly.swift */; };
+		1E82E56324D19E420074B922 /* LaunchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E82E56224D19E420074B922 /* LaunchRouter.swift */; };
 		1E9BF14B24BF2C90008B5E70 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9BF14A24BF2C90008B5E70 /* AppDelegate.swift */; };
 		1E9BF15424BF2C91008B5E70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E9BF15324BF2C91008B5E70 /* Assets.xcassets */; };
 		1E9BF15724BF2C91008B5E70 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E9BF15524BF2C91008B5E70 /* LaunchScreen.storyboard */; };
@@ -84,6 +89,11 @@
 		1E39549A24C039FE00B1CA57 /* UsersListScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListScreenRouter.swift; sourceTree = "<group>"; };
 		1E39549C24C03A5A00B1CA57 /* UsersListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListInteractor.swift; sourceTree = "<group>"; };
 		1E39549E24C049B200B1CA57 /* UsersListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListViewController.swift; sourceTree = "<group>"; };
+		1E82E55A24D19E020074B922 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
+		1E82E55C24D19E130074B922 /* LaunchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchPresenter.swift; sourceTree = "<group>"; };
+		1E82E55E24D19E250074B922 /* LaunchInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchInteractor.swift; sourceTree = "<group>"; };
+		1E82E56024D19E350074B922 /* LaunchAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchAssembly.swift; sourceTree = "<group>"; };
+		1E82E56224D19E420074B922 /* LaunchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchRouter.swift; sourceTree = "<group>"; };
 		1E9BF14724BF2C90008B5E70 /* VIPERtoCRY.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VIPERtoCRY.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E9BF14A24BF2C90008B5E70 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1E9BF15324BF2C91008B5E70 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -191,6 +201,50 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
+		1E82E55524D19DA70074B922 /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				1E82E55924D19DB90074B922 /* View */,
+				1E82E55824D19DB70074B922 /* Presenter */,
+				1E82E55724D19DB50074B922 /* Interactor */,
+				1E82E55624D19DB10074B922 /* Wireframe */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		1E82E55624D19DB10074B922 /* Wireframe */ = {
+			isa = PBXGroup;
+			children = (
+				1E82E56024D19E350074B922 /* LaunchAssembly.swift */,
+				1E82E56224D19E420074B922 /* LaunchRouter.swift */,
+			);
+			path = Wireframe;
+			sourceTree = "<group>";
+		};
+		1E82E55724D19DB50074B922 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				1E82E55E24D19E250074B922 /* LaunchInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		1E82E55824D19DB70074B922 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				1E82E55C24D19E130074B922 /* LaunchPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		1E82E55924D19DB90074B922 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1E82E55A24D19E020074B922 /* LaunchViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		1E9BF13E24BF2C90008B5E70 = {
 			isa = PBXGroup;
 			children = (
@@ -224,6 +278,7 @@
 		1E9BF15E24BF2C9D008B5E70 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				1E82E55524D19DA70074B922 /* Launch */,
 				1E9BF16424BF2DC7008B5E70 /* UsersListScreenModule */,
 				1E9BF16324BF2DC2008B5E70 /* DetailScreenModule */,
 				1E9BF16224BF2DBE008B5E70 /* SignInScreenModule */,
@@ -720,6 +775,7 @@
 				1E39549924C033A300B1CA57 /* UsersListNetwokManager.swift in Sources */,
 				1E095D7C24C5D1E400081545 /* DetailRouter.swift in Sources */,
 				1EEBE8D724C9B36800665F06 /* SignInPresenter.swift in Sources */,
+				1E82E55F24D19E250074B922 /* LaunchInteractor.swift in Sources */,
 				1E9BF14B24BF2C90008B5E70 /* AppDelegate.swift in Sources */,
 				1EEBE8CC24C96DDD00665F06 /* Collection+Register.swift in Sources */,
 				1EF6954124CABA170065CA13 /* SignUpPresenter.swift in Sources */,
@@ -731,7 +787,9 @@
 				1EF6954724CABA480065CA13 /* SignUpRouter.swift in Sources */,
 				1E353D6424C816890082A4F8 /* PositionTableViewCell.swift in Sources */,
 				1E353D6624C816B00082A4F8 /* CompanyTableViewCell.swift in Sources */,
+				1E82E55D24D19E130074B922 /* LaunchPresenter.swift in Sources */,
 				1E095D7424C5D17C00081545 /* DetailViewController.swift in Sources */,
+				1E82E56324D19E420074B922 /* LaunchRouter.swift in Sources */,
 				1EC49F8824D17EB9004C1925 /* CreateViewController.swift in Sources */,
 				1EF6953D24C9DF200065CA13 /* UITextField+roundsCorner.swift in Sources */,
 				1EC49F8C24D17EE0004C1925 /* CreateInteractor.swift in Sources */,
@@ -740,6 +798,7 @@
 				1E9BF18524BF3CDF008B5E70 /* UsersListCustomTableViewCell.swift in Sources */,
 				1EEBE8CF24C9783500665F06 /* SetupDetailLabel.swift in Sources */,
 				1EC49F7524D07D68004C1925 /* ProfileViewController.swift in Sources */,
+				1E82E56124D19E350074B922 /* LaunchAssembly.swift in Sources */,
 				1EC49F8A24D17ECF004C1925 /* CreatePresenter.swift in Sources */,
 				1E353D7124C838270082A4F8 /* DetailDataProvider.swift in Sources */,
 				1E095D7824C5D1A100081545 /* DetailPresenter.swift in Sources */,
@@ -760,6 +819,7 @@
 				1EC49F7F24D17CC3004C1925 /* ProfileModel.swift in Sources */,
 				1EC49F7B24D07DAE004C1925 /* ProfileAssembly.swift in Sources */,
 				1EEBE8C824C96DDD00665F06 /* Foundation+Extension.swift in Sources */,
+				1E82E55B24D19E020074B922 /* LaunchViewController.swift in Sources */,
 				1E9BF18324BF3AC1008B5E70 /* UsersDataListModel.swift in Sources */,
 				1EEBE8D924C9B37C00665F06 /* SignInAssembly.swift in Sources */,
 				1E9BF18124BF37D5008B5E70 /* UserModel.swift in Sources */,

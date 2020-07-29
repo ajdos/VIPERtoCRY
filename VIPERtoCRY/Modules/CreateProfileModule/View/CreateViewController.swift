@@ -8,13 +8,19 @@
 
 import UIKit
 
-protocol CreateViewInput {
+protocol CreateViewInput: class {
     
 }
 
 class CreateViewController: UIViewController {
 
     var presenter: CreateViewOutput?
+    var choisePhoto = UIImageView()
+    var nameTF = UITextField()
+    var birthdayPicker = UIDatePicker()
+    var phoneNumberTF = UITextField()
+    var aboutTF = UITextField()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

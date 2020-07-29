@@ -14,6 +14,11 @@ protocol CreateRouterInput {
 
 class CreateRouter {
     
+    var transition: ModuleTransitionHandler?
+    
+    init(transition: ModuleTransitionHandler) {
+        self.transition = transition
+    }
 }
 
 extension CreateRouter: CreateRouterInput {

@@ -13,7 +13,7 @@ protocol CreateInteractorInput {
 }
 
 class CreateInteractor {
-    
+    weak var presenter: CreateInteractorOutput?
 }
 
 extension CreateInteractor: CreateInteractorInput {

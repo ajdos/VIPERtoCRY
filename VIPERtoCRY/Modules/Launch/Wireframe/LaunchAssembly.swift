@@ -1,5 +1,5 @@
 //
-//  CreateProfileAssembly.swift
+//  LaunchAssembly.swift
 //  VIPERtoCRY
 //
 //  Created by Айдин Абдурахманов on 29.07.2020.
@@ -8,13 +8,12 @@
 
 import UIKit
 
-final class CreateAssembly: Assembly {
+final class LaunchAssembly: Assembly {
     static func assembleModule() -> UIViewController {
-        
-        let view = CreateViewController()
-        let presenter = CreatePresenter()
-        let interactor = CreateInteractor()
-        let router = CreateRouter(transition: view)
+        let view = LaunchViewController()
+        let presenter = LaunchPresenter()
+        let interactor = LaunchInteractor()
+        let router = LaunchRouter(transition: view)
         
         view.presenter = presenter
         presenter.view = view

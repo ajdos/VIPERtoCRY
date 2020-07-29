@@ -36,7 +36,7 @@ extension ProfileViewController {
            navigationController?.navigationBar.isHidden = false
            setDarkNavigationBar()
            setTitleColor(color: .white)
-           setCustomBackIcon(tintColor: .white)
+        self.navigationItem.backBarButtonItem = nil
            setSettingsBarButtonItem(tintColor: .white, target: self, action: #selector(settingsTap))
            self.title = "Profile"
            

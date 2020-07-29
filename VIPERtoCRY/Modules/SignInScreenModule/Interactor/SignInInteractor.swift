@@ -11,7 +11,6 @@ import Firebase
 
 protocol SignInInteractorInput {
     func findAUser(email: String, password: String)
-    func checkLogIn()
 }
 
 class SignInInteractor {
@@ -22,15 +21,6 @@ class SignInInteractor {
 }
 
 extension SignInInteractor: SignInInteractorInput {
-    func checkLogIn() {
-        Auth.auth().addStateDidChangeListener { (auth, user) in
-            if user != nil {
-                self.presenter?.loginСompleted()
-            } else {
-                self.presenter?.loginNotComplited()
-            }
-        }
-    }
     
     func findAUser(email: String, password: String) {
          Auth.auth().signIn(withEmail: email, password: password, completion: { (user, error) in

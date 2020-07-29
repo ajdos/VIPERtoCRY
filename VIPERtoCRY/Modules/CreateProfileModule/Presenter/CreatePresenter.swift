@@ -12,11 +12,15 @@ protocol CreateViewOutput {
     
 }
 
-protocol CreateInteractorOutput {
+protocol CreateInteractorOutput: class {
     
 }
 
 class CreatePresenter {
+    
+    weak var view: CreateViewInput?
+    var interactor: CreateInteractorInput?
+    var router: CreateRouterInput?
     
 }
 

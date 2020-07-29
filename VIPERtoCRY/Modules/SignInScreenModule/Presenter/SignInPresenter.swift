@@ -12,15 +12,12 @@ import Firebase
 protocol SignInViewOutput {
     func signUpTapped()
     func loginTapped(with email: String?, password: String?)
-    func viewIsReady()
 }
 
 protocol SignInInteractorOutput: class {
     func errorOccured()
     func noSuchUser()
     func userSignIn()
-    func loginСompleted()
-    func loginNotComplited()
 }
 
 class SignInPresenter {
@@ -36,14 +33,7 @@ class SignInPresenter {
 }
 
 extension SignInPresenter: SignInInteractorOutput {
-    func loginСompleted() {
-        router?.openProfile()
-    }
-    
-    func loginNotComplited() {
-        router?.openSignIn()
-    }
-    
+ 
     func errorOccured() {
         view?.displayWarningLabel(with: "Incorrect E-mail or Password! Try again.")
     }
@@ -59,9 +49,6 @@ extension SignInPresenter: SignInInteractorOutput {
 }
 
 extension SignInPresenter: SignInViewOutput {
-    func viewIsReady() {
-        interactor?.checkLogIn()
-    }
     
     func signUpTapped() {
         router?.openSignUpView()
