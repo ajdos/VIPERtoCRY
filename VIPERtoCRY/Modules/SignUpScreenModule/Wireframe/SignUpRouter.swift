@@ -26,7 +26,7 @@ extension SignUpRouter: SignUpRouterInput {
         transition?.pop()
     }
     func openProfile() {
-        // transition
+        transition?.push(moduleType: ProfileAssembly.self)
     }
 
     

@@ -32,6 +32,17 @@
 		1E9BF18324BF3AC1008B5E70 /* UsersDataListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9BF18224BF3AC1008B5E70 /* UsersDataListModel.swift */; };
 		1E9BF18524BF3CDF008B5E70 /* UsersListCustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9BF18424BF3CDF008B5E70 /* UsersListCustomTableViewCell.swift */; };
 		1EC49F6B24D0078F004C1925 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1EC49F6A24D0078F004C1925 /* GoogleService-Info.plist */; };
+		1EC49F7524D07D68004C1925 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC49F7424D07D68004C1925 /* ProfileViewController.swift */; };
+		1EC49F7724D07D83004C1925 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC49F7624D07D83004C1925 /* ProfilePresenter.swift */; };
+		1EC49F7924D07D97004C1925 /* ProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC49F7824D07D97004C1925 /* ProfileInteractor.swift */; };
+		1EC49F7B24D07DAE004C1925 /* ProfileAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC49F7A24D07DAE004C1925 /* ProfileAssembly.swift */; };
+		1EC49F7D24D07DC1004C1925 /* ProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC49F7C24D07DC1004C1925 /* ProfileRouter.swift */; };
+		1EC49F7F24D17CC3004C1925 /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC49F7E24D17CC3004C1925 /* ProfileModel.swift */; };
+		1EC49F8824D17EB9004C1925 /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC49F8724D17EB9004C1925 /* CreateViewController.swift */; };
+		1EC49F8A24D17ECF004C1925 /* CreatePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC49F8924D17ECF004C1925 /* CreatePresenter.swift */; };
+		1EC49F8C24D17EE0004C1925 /* CreateInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC49F8B24D17EE0004C1925 /* CreateInteractor.swift */; };
+		1EC49F8E24D17EF4004C1925 /* CreateAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC49F8D24D17EF4004C1925 /* CreateAssembly.swift */; };
+		1EC49F9024D17F05004C1925 /* CreateRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC49F8F24D17F05004C1925 /* CreateRouter.swift */; };
 		1EEBE8C724C96DDD00665F06 /* Assembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEBE8C024C96DDD00665F06 /* Assembly.swift */; };
 		1EEBE8C824C96DDD00665F06 /* Foundation+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEBE8C124C96DDD00665F06 /* Foundation+Extension.swift */; };
 		1EEBE8C924C96DDD00665F06 /* ConfigurableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEBE8C224C96DDD00665F06 /* ConfigurableCell.swift */; };
@@ -82,6 +93,17 @@
 		1E9BF18224BF3AC1008B5E70 /* UsersDataListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersDataListModel.swift; sourceTree = "<group>"; };
 		1E9BF18424BF3CDF008B5E70 /* UsersListCustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListCustomTableViewCell.swift; sourceTree = "<group>"; };
 		1EC49F6A24D0078F004C1925 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1EC49F7424D07D68004C1925 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		1EC49F7624D07D83004C1925 /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
+		1EC49F7824D07D97004C1925 /* ProfileInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInteractor.swift; sourceTree = "<group>"; };
+		1EC49F7A24D07DAE004C1925 /* ProfileAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileAssembly.swift; sourceTree = "<group>"; };
+		1EC49F7C24D07DC1004C1925 /* ProfileRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRouter.swift; sourceTree = "<group>"; };
+		1EC49F7E24D17CC3004C1925 /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
+		1EC49F8724D17EB9004C1925 /* CreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateViewController.swift; sourceTree = "<group>"; };
+		1EC49F8924D17ECF004C1925 /* CreatePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePresenter.swift; sourceTree = "<group>"; };
+		1EC49F8B24D17EE0004C1925 /* CreateInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateInteractor.swift; sourceTree = "<group>"; };
+		1EC49F8D24D17EF4004C1925 /* CreateAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAssembly.swift; sourceTree = "<group>"; };
+		1EC49F8F24D17F05004C1925 /* CreateRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRouter.swift; sourceTree = "<group>"; };
 		1EEBE8C024C96DDD00665F06 /* Assembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assembly.swift; sourceTree = "<group>"; };
 		1EEBE8C124C96DDD00665F06 /* Foundation+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Foundation+Extension.swift"; sourceTree = "<group>"; };
 		1EEBE8C224C96DDD00665F06 /* ConfigurableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurableCell.swift; sourceTree = "<group>"; };
@@ -192,7 +214,6 @@
 			children = (
 				1E9BF16024BF2CFC008B5E70 /* Application */,
 				1E9BF15E24BF2C9D008B5E70 /* Modules */,
-				1EF6954824CAF80E0065CA13 /* ProfileModule */,
 				1E3EFADD24C963A600CB1828 /* Common */,
 				1E9BF17A24BF300B008B5E70 /* Services */,
 				1E9BF17B24BF3087008B5E70 /* Resources */,
@@ -207,6 +228,8 @@
 				1E9BF16324BF2DC2008B5E70 /* DetailScreenModule */,
 				1E9BF16224BF2DBE008B5E70 /* SignInScreenModule */,
 				1E9BF16124BF2DBA008B5E70 /* SignUpScreenModule */,
+				1EC49F8024D17E41004C1925 /* CreateProfileModule */,
+				1EC49F6C24D07C97004C1925 /* ProfileScreenModule */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -456,11 +479,109 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		1EF6954824CAF80E0065CA13 /* ProfileModule */ = {
+		1EC49F6C24D07C97004C1925 /* ProfileScreenModule */ = {
+			isa = PBXGroup;
+			children = (
+				1EC49F6D24D07CE2004C1925 /* View */,
+				1EC49F7324D07D1D004C1925 /* Presenter */,
+				1EC49F7024D07D04004C1925 /* Interactor */,
+				1EC49F7124D07D13004C1925 /* Model */,
+				1EC49F6F24D07D01004C1925 /* Wireframe */,
+			);
+			path = ProfileScreenModule;
+			sourceTree = "<group>";
+		};
+		1EC49F6D24D07CE2004C1925 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1EC49F7424D07D68004C1925 /* ProfileViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1EC49F6F24D07D01004C1925 /* Wireframe */ = {
+			isa = PBXGroup;
+			children = (
+				1EC49F7A24D07DAE004C1925 /* ProfileAssembly.swift */,
+				1EC49F7C24D07DC1004C1925 /* ProfileRouter.swift */,
+			);
+			path = Wireframe;
+			sourceTree = "<group>";
+		};
+		1EC49F7024D07D04004C1925 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				1EC49F7824D07D97004C1925 /* ProfileInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		1EC49F7124D07D13004C1925 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1EC49F7E24D17CC3004C1925 /* ProfileModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1EC49F7324D07D1D004C1925 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				1EC49F7624D07D83004C1925 /* ProfilePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		1EC49F8024D17E41004C1925 /* CreateProfileModule */ = {
+			isa = PBXGroup;
+			children = (
+				1EC49F8124D17E5E004C1925 /* View */,
+				1EC49F8224D17E65004C1925 /* Presenter */,
+				1EC49F8424D17E7F004C1925 /* Interactor */,
+				1EC49F8524D17E89004C1925 /* Model */,
+				1EC49F8624D17E93004C1925 /* Wireframe */,
+			);
+			path = CreateProfileModule;
+			sourceTree = "<group>";
+		};
+		1EC49F8124D17E5E004C1925 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1EC49F8724D17EB9004C1925 /* CreateViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1EC49F8224D17E65004C1925 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				1EC49F8924D17ECF004C1925 /* CreatePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		1EC49F8424D17E7F004C1925 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				1EC49F8B24D17EE0004C1925 /* CreateInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		1EC49F8524D17E89004C1925 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = ProfileModule;
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1EC49F8624D17E93004C1925 /* Wireframe */ = {
+			isa = PBXGroup;
+			children = (
+				1EC49F8D24D17EF4004C1925 /* CreateAssembly.swift */,
+				1EC49F8F24D17F05004C1925 /* CreateRouter.swift */,
+			);
+			path = Wireframe;
 			sourceTree = "<group>";
 		};
 		AC617638E6C26A780460F0B6 /* Frameworks */ = {
@@ -603,30 +724,41 @@
 				1EEBE8CC24C96DDD00665F06 /* Collection+Register.swift in Sources */,
 				1EF6954124CABA170065CA13 /* SignUpPresenter.swift in Sources */,
 				1E39549324BF4D3600B1CA57 /* UserListScreenAssembly.swift in Sources */,
+				1EC49F7D24D07DC1004C1925 /* ProfileRouter.swift in Sources */,
+				1EC49F7724D07D83004C1925 /* ProfilePresenter.swift in Sources */,
 				1EEBE8CA24C96DDD00665F06 /* ModuleTransitionHandler.swift in Sources */,
+				1EC49F7924D07D97004C1925 /* ProfileInteractor.swift in Sources */,
 				1EF6954724CABA480065CA13 /* SignUpRouter.swift in Sources */,
 				1E353D6424C816890082A4F8 /* PositionTableViewCell.swift in Sources */,
 				1E353D6624C816B00082A4F8 /* CompanyTableViewCell.swift in Sources */,
 				1E095D7424C5D17C00081545 /* DetailViewController.swift in Sources */,
+				1EC49F8824D17EB9004C1925 /* CreateViewController.swift in Sources */,
 				1EF6953D24C9DF200065CA13 /* UITextField+roundsCorner.swift in Sources */,
+				1EC49F8C24D17EE0004C1925 /* CreateInteractor.swift in Sources */,
 				1EF6954524CABA390065CA13 /* SignUpAssembly.swift in Sources */,
 				1EF6954324CABA280065CA13 /* SignUpInteractor.swift in Sources */,
 				1E9BF18524BF3CDF008B5E70 /* UsersListCustomTableViewCell.swift in Sources */,
 				1EEBE8CF24C9783500665F06 /* SetupDetailLabel.swift in Sources */,
+				1EC49F7524D07D68004C1925 /* ProfileViewController.swift in Sources */,
+				1EC49F8A24D17ECF004C1925 /* CreatePresenter.swift in Sources */,
 				1E353D7124C838270082A4F8 /* DetailDataProvider.swift in Sources */,
 				1E095D7824C5D1A100081545 /* DetailPresenter.swift in Sources */,
 				1E353D6E24C82CF00082A4F8 /* DetailViewModel.swift in Sources */,
 				1E39549F24C049B200B1CA57 /* UsersListViewController.swift in Sources */,
+				1EC49F8E24D17EF4004C1925 /* CreateAssembly.swift in Sources */,
 				1E095D8E24C72BE000081545 /* FullNameTableViewCell.swift in Sources */,
 				1E095D7A24C5D1D500081545 /* DetailAssembly.swift in Sources */,
 				1E39549B24C039FE00B1CA57 /* UsersListScreenRouter.swift in Sources */,
 				1E095D7624C5D19000081545 /* DetailInteractor.swift in Sources */,
+				1EC49F9024D17F05004C1925 /* CreateRouter.swift in Sources */,
 				1EEBE8D524C9B34F00665F06 /* SignInInteractor.swift in Sources */,
 				1E39549724C0309E00B1CA57 /* UsersListPresenter.swift in Sources */,
 				1EEBE8C724C96DDD00665F06 /* Assembly.swift in Sources */,
 				1E39549D24C03A5A00B1CA57 /* UsersListInteractor.swift in Sources */,
 				1EEBE8C924C96DDD00665F06 /* ConfigurableCell.swift in Sources */,
 				1EEBE8D324C9B33900665F06 /* SignInViewController.swift in Sources */,
+				1EC49F7F24D17CC3004C1925 /* ProfileModel.swift in Sources */,
+				1EC49F7B24D07DAE004C1925 /* ProfileAssembly.swift in Sources */,
 				1EEBE8C824C96DDD00665F06 /* Foundation+Extension.swift in Sources */,
 				1E9BF18324BF3AC1008B5E70 /* UsersDataListModel.swift in Sources */,
 				1EEBE8D924C9B37C00665F06 /* SignInAssembly.swift in Sources */,

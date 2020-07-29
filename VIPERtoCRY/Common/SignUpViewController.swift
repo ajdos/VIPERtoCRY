@@ -15,6 +15,7 @@ protocol SignUpViewInput: class {
 class SignUpViewController: UIViewController {
     
     var presenter: SignUpViewOutput?
+    var scrollView = UIScrollView()
     var registrationLabel = UILabel()
     var instructionLabel = UILabel()
     var incorrectDataLabel = UILabel()
@@ -39,29 +40,16 @@ class SignUpViewController: UIViewController {
         navigationController?.navigationBar.isHidden = true
     }
     
-    @objc private func keyboardDidShow(notification: Notification) {
-          if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
-              if self.view.frame.origin.y == 0 {
-                UIView.animate(withDuration: 0.1, animations: {
-                    self.view.frame.origin.y -= keyboardSize.height / 1.5
-                }) { (result) in
-                    if result { self.registrationLabel.isHidden = true }
-                }
-                
-              }
-          }
-          
-      }
-      @objc private func keyboardDidHide() {
-          if self.view.frame.origin.y != 0 {
-            UIView.animate(withDuration: 0.1, animations: {
-                self.view.frame.origin.y = 0
-            }) { (result) in
-                if result { self.registrationLabel.isHidden = false }
-            }
-              
-          }
-      }
+  @objc private func keyboardDidShow(notification: Notification) {
+        guard let userInfo = notification.userInfo else { return }
+        let keyboardSize = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
+        
+        self.scrollView.contentSize = CGSize(width: self.view.bounds.width, height: self.view.bounds.height + keyboardSize.height)
+        self.scrollView.showsVerticalScrollIndicator = false
+    }
+    @objc private func keyboardDidHide() {
+        self.scrollView.contentSize = CGSize(width: self.view.bounds.width, height: self.view.bounds.height)
+    }
     
     @objc private func textFieldChanged() {
         if nameTextField.text?.isEmpty == false && emailTextField.text?.isEmpty == false && emailTextField.text!.contains("@") && emailTextField.text!.contains(".") && (passwordTextField.text?.count)! >= 8 && (confirmPasswordTextField.text?.count)! >= 8 {
@@ -80,7 +68,7 @@ class SignUpViewController: UIViewController {
         presenter?.backButtonTapped()
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)
+        self.scrollView.endEditing(true)
     }
 }
 
@@ -105,13 +93,16 @@ extension SignUpViewController {
         view.clipsToBounds = true
         incorrectDataLabel.alpha = 0
         view.backgroundColor = .orange
+        view.addSubview(scrollView)
+        scrollView.autoPinEdgesToSuperviewEdges()
+        scrollView.contentSize = CGSize(width: view.frame.size.width, height: 4000)
         
         registrationLabel.text = "Come, come my friend!"
         registrationLabel.font = UIFont(name: "GillSans-UltraBold", size: 48)
         registrationLabel.textColor = .black
         registrationLabel.textAlignment = .center
         registrationLabel.numberOfLines = 0
-        view.addSubview(registrationLabel)
+        scrollView.addSubview(registrationLabel)
         registrationLabel.autoPinEdge(toSuperviewEdge: .right, withInset: 8)
         registrationLabel.autoPinEdge(toSuperviewEdge: .left, withInset: 8)
         registrationLabel.autoAlignAxis(toSuperviewAxis: .vertical)
@@ -122,7 +113,7 @@ extension SignUpViewController {
         instructionLabel.font = .italicSystemFont(ofSize: 16)
         instructionLabel.textAlignment = .center
         instructionLabel.numberOfLines = 2
-        view.addSubview(instructionLabel)
+        scrollView.addSubview(instructionLabel)
         instructionLabel.autoAlignAxis(toSuperviewAxis: .vertical)
         instructionLabel.autoPinEdge(.top, to: .bottom, of: registrationLabel, withOffset: 30)
         instructionLabel.autoPinEdge(toSuperviewEdge: .right, withInset: 8)
@@ -133,7 +124,7 @@ extension SignUpViewController {
         incorrectDataLabel.font = .boldSystemFont(ofSize: 16)
         incorrectDataLabel.textAlignment = .center
         incorrectDataLabel.numberOfLines = 1
-        view.addSubview(incorrectDataLabel)
+        scrollView.addSubview(incorrectDataLabel)
         incorrectDataLabel.autoAlignAxis(toSuperviewAxis: .vertical)
         incorrectDataLabel.autoPinEdge(.top, to: .bottom, of: registrationLabel, withOffset: 30)
         incorrectDataLabel.autoPinEdge(toSuperviewEdge: .right, withInset: 8)
@@ -147,7 +138,7 @@ extension SignUpViewController {
         nameTextField.clearButtonMode = .always
         nameTextField.keyboardAppearance = .dark
         nameTextField.returnKeyType = .default
-        view.addSubview(nameTextField)
+        scrollView.addSubview(nameTextField)
         nameTextField.layer.masksToBounds = true
         nameTextField.autoSetDimension(.height, toSize: 50)
         nameTextField.autoAlignAxis(toSuperviewAxis: .vertical)
@@ -163,7 +154,7 @@ extension SignUpViewController {
         emailTextField.clearButtonMode = .always
         emailTextField.keyboardAppearance = .dark
         emailTextField.returnKeyType = .default
-        view.addSubview(emailTextField)
+        scrollView.addSubview(emailTextField)
         emailTextField.layer.masksToBounds = true
         emailTextField.autoSetDimension(.height, toSize: 50)
         emailTextField.autoAlignAxis(toSuperviewAxis: .vertical)
@@ -180,7 +171,7 @@ extension SignUpViewController {
         passwordTextField.keyboardAppearance = .dark
         passwordTextField.returnKeyType = .default
         passwordTextField.isSecureTextEntry = true //TODO: add eye selector
-        view.addSubview(passwordTextField)
+        scrollView.addSubview(passwordTextField)
         passwordTextField.layer.masksToBounds = true
         passwordTextField.autoSetDimension(.height, toSize: 50)
         passwordTextField.autoAlignAxis(toSuperviewAxis: .vertical)
@@ -197,7 +188,7 @@ extension SignUpViewController {
         confirmPasswordTextField.keyboardAppearance = .dark
         confirmPasswordTextField.returnKeyType = .continue
         confirmPasswordTextField.isSecureTextEntry = true //TODO: add eye selector
-        view.addSubview(confirmPasswordTextField)
+        scrollView.addSubview(confirmPasswordTextField)
         confirmPasswordTextField.layer.masksToBounds = true
         confirmPasswordTextField.autoSetDimension(.height, toSize: 50)
         confirmPasswordTextField.autoAlignAxis(toSuperviewAxis: .vertical)
@@ -210,7 +201,7 @@ extension SignUpViewController {
         continueButton.setTitle("Continue", for: .normal)
         continueButton.tintColor = .white
         continueButton.titleColor(for: .highlighted)
-        view.addSubview(continueButton)
+        scrollView.addSubview(continueButton)
         continueButton.clipsToBounds = true
         continueButton.layer.cornerRadius = 15
         continueButton.autoSetDimensions(to: CGSize(width: 20, height: 45))
@@ -224,7 +215,7 @@ extension SignUpViewController {
         backButton.setTitle("Return to Log in", for: .normal)
         backButton.tintColor = .white
         backButton.titleColor(for: .focused)
-        view.addSubview(backButton)
+        scrollView.addSubview(backButton)
         backButton.clipsToBounds = true
         backButton.layer.cornerRadius = 15
         backButton.autoSetDimensions(to: CGSize(width: 20, height: 45))

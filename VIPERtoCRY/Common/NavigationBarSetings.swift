@@ -40,7 +40,11 @@ extension UIViewController {
         shareItem.style = .plain
     }
     
-    
+    func setSettingsBarButtonItem(tintColor: UIColor, target: UIViewController, action: Selector?) {
+        let settingsItem = UIBarButtonItem(image: #imageLiteral(resourceName: "icons8-settings-50"), style: .plain, target: target, action: action)
+        settingsItem.tintColor = tintColor
+        navigationItem.rightBarButtonItem = settingsItem
+    }
  
     
 }
