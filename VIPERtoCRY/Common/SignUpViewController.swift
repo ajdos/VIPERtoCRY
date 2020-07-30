@@ -28,6 +28,7 @@ class SignUpViewController: UIViewController {
     
     
     override func viewDidLoad() {
+        presenter?.viewIsReady()
         super.viewDidLoad()
         navigationController?.navigationBar.isHidden = true
         setupViews()
@@ -61,7 +62,6 @@ class SignUpViewController: UIViewController {
     
     @objc private func continueTap(sender: UIButton!) {
         presenter?.continueButtonTapped(name: nameTextField.text, email: emailTextField.text, password: passwordTextField.text, confirmPassword: confirmPasswordTextField.text)
-        print("Continue Button enabled")
     }
     
     @objc private func backTap(sender: UIButton!) {

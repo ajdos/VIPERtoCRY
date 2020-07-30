@@ -44,4 +44,10 @@ extension UIViewController {
         settingsItem.tintColor = tintColor
         navigationItem.rightBarButtonItem = settingsItem
     }
+    func setSaveBarButtonItem(tintColor: UIColor, target: UIViewController, action: Selector?) {
+        let saveItem = UIBarButtonItem(image: #imageLiteral(resourceName: "icons8-save-80"), style: .plain, target: target, action: action)
+        saveItem.tintColor = tintColor
+        navigationItem.rightBarButtonItem = saveItem
+    }
+    
 }

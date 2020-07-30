@@ -10,7 +10,7 @@ import Foundation
 
 protocol SignUpRouterInput {
     func openSignInView()
-    func openProfile()
+    func openCreateModule()
 }
 
 final class SignUpRouter {
@@ -25,8 +25,8 @@ extension SignUpRouter: SignUpRouterInput {
     func openSignInView() {
         transition?.pop()
     }
-    func openProfile() {
-        transition?.push(moduleType: ProfileAssembly.self)
+    func openCreateModule() {
+        transition?.push(moduleType: CreateAssembly.self)
     }
 
     

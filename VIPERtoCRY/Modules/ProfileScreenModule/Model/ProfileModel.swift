@@ -11,7 +11,7 @@ import UIKit
 struct Profile {
     var photo: UIImage
     var name: String
-    var birthDay: String
+    var birthDay: Date
     var phoneNumber: String
     var aboutMe: String
     

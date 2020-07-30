@@ -268,6 +268,8 @@
 			children = (
 				1E9BF16024BF2CFC008B5E70 /* Application */,
 				1E9BF15E24BF2C9D008B5E70 /* Modules */,
+				1E9BF16424BF2DC7008B5E70 /* UsersListScreenModule */,
+				1E9BF16324BF2DC2008B5E70 /* DetailScreenModule */,
 				1E3EFADD24C963A600CB1828 /* Common */,
 				1E9BF17A24BF300B008B5E70 /* Services */,
 				1E9BF17B24BF3087008B5E70 /* Resources */,
@@ -279,8 +281,6 @@
 			isa = PBXGroup;
 			children = (
 				1E82E55524D19DA70074B922 /* Launch */,
-				1E9BF16424BF2DC7008B5E70 /* UsersListScreenModule */,
-				1E9BF16324BF2DC2008B5E70 /* DetailScreenModule */,
 				1E9BF16224BF2DBE008B5E70 /* SignInScreenModule */,
 				1E9BF16124BF2DBA008B5E70 /* SignUpScreenModule */,
 				1EC49F8024D17E41004C1925 /* CreateProfileModule */,
