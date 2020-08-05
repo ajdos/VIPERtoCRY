@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>FirebaseScreenReportingEnabled</key>
+	<string>NO</string>
+	<key>CLIENT_ID</key>
+	<string>1096539240597-49qn2tmvemgo69kefdda7fk16tc9mgtq.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.1096539240597-49qn2tmvemgo69kefdda7fk16tc9mgtq</string>
+	<key>API_KEY</key>
+	<string>AIzaSyC6vWT6X2eW9NyNPi0PHA2upUFt1i2QLmc</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1096539240597</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>ru.swiftbook.VIPERtoCRY</string>
+	<key>PROJECT_ID</key>
+	<string>vipertocry</string>
+	<key>STORAGE_BUCKET</key>
+	<string>vipertocry.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1096539240597:ios:dfa7ba8357dfda584ec39c</string>
+	<key>DATABASE_URL</key>
+	<string>https://vipertocry.firebaseio.com</string>
+</dict>
+</plist>

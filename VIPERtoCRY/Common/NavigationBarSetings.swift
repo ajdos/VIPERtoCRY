@@ -26,11 +26,10 @@ extension UIViewController {
     }
     
     func setCustomBackIcon(tintColor: UIColor) {
-        let backItem = UIBarButtonItem()
+        let backItem = UIBarButtonItem(image: #imageLiteral(resourceName: "icons8-back-200"), style: .done, target: nil, action: nil)
         backItem.tintColor = tintColor
         backItem.title = ""
         navigationItem.backBarButtonItem = backItem
-        backItem.style = .done
     }
     
     func setShareBarButtonItem(tintColor: UIColor, target: UIViewController, action: Selector?) {
@@ -40,7 +39,15 @@ extension UIViewController {
         shareItem.style = .plain
     }
     
-    
- 
+    func setSettingsBarButtonItem(tintColor: UIColor, target: UIViewController, action: Selector?) {
+        let settingsItem = UIBarButtonItem(image: #imageLiteral(resourceName: "icons8-settings-50"), style: .plain, target: target, action: action)
+        settingsItem.tintColor = tintColor
+        navigationItem.rightBarButtonItem = settingsItem
+    }
+    func setSaveBarButtonItem(tintColor: UIColor, target: UIViewController, action: Selector?) {
+        let saveItem = UIBarButtonItem(image: #imageLiteral(resourceName: "icons8-save-80"), style: .plain, target: target, action: action)
+        saveItem.tintColor = tintColor
+        navigationItem.rightBarButtonItem = saveItem
+    }
     
 }

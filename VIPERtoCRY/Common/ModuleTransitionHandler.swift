@@ -15,6 +15,7 @@ protocol ModuleTransitionHandler: AnyObject {
     func show<ModuleType: Assembly>(with model: TransitionModel, openModuleType: ModuleType)
     func push<ModuleType: Assembly>(with model: TransitionModel, openModuleType: ModuleType.Type)
     func push<ModuleType: Assembly>(moduleType: ModuleType.Type)
+    func push<ModuleType: Assembly>(moduleType: ModuleType.Type, animated: Bool)
     func pop()
     func popToRootViewController()
     func closeModule()
@@ -24,6 +25,7 @@ protocol ModuleTransitionHandler: AnyObject {
 }
 
 extension UIViewController: ModuleTransitionHandler {
+    
     func closeNavigationStack(_ completion: (() -> Void)?) {
         navigationController?.dismiss(animated: true, completion: completion)
     }
@@ -63,6 +65,11 @@ extension UIViewController: ModuleTransitionHandler {
     func push<ModuleType: Assembly>(moduleType: ModuleType.Type) {
         let view = ModuleType.assembleModule()
         navigationController?.pushViewController(view, animated: true)
+    }
+    
+    func push<ModuleType: Assembly>(moduleType: ModuleType.Type, animated: Bool) {
+        let view = ModuleType.assembleModule()
+        navigationController?.pushViewController(view, animated: animated)
     }
     
     func closeModule() {
